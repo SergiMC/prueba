@@ -64,7 +64,7 @@ el protocol POP3.
 remot al correu, també conté les bústies dels usuaris. Els missatges
 es reben mitjançant SMTP.
 
-* **Estats de sessió del POP3**
+**Estats de sessió del POP3**
 
 El protocol POP3 està estructurat per tres estats:
 
@@ -86,7 +86,7 @@ El servidor entra en l'estat actualització una vegada ha rebut l'ordre
 "quit" del client. En aquest moment es finalitza la comunicació
 
 
-* **Ordres del POP3**
+**Ordres del POP3**
 
 En cada estat s'originen una serie d'ordres per interactuar.
 
@@ -137,7 +137,7 @@ es permet la manipulació remota de les carpetes i els missatges.
 Es poden crear, modificar i suprimir carpetes i missatges
 
 
-* **Model IMAP**
+**Model IMAP**
 
 L'estructura del model IMAP és de client/servidor i intervenen varis agents:
 
@@ -156,7 +156,7 @@ remot al correu, també conté les bústies dels usuaris. Els missatges
 es reben mitjançant SMTP.
 
 
-* **Estats del protocol IMAP**
+**Estats del protocol IMAP**
 
 El protocol IMAP està estructurat per quatre estats:
 
@@ -218,7 +218,7 @@ en les pròpies bústies que en faciliten la gestió:
 	
 	
 	
-* **Funcionament IMAP**
+**Funcionament IMAP**
 
 Generalmen el funcionament del protocol IMAP és la connexió del
 client al servidor a través del port 143 on s'inicia un diàleg el 
