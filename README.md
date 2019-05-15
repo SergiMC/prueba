@@ -39,7 +39,7 @@ es connecti en qualsevol lloc.
 Aquest va ocasionar el desenvolupament del protocol POP3 i del protocol IMAP, 
 que permeten l'accés remot de clients a les bústies de correu.
 
-* Protocol POP3
+* **Protocol POP3**
 
 El servei POP3 és un protocol de la capa d'aplicació (TCP/IP) port 110, que
 permet que un usuari es connecti remotament al servidor de correus. Em de tenir
