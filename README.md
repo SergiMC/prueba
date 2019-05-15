@@ -1,5 +1,3 @@
-# prueba
-
 Sergi Muñoz Carmona
 hisx2 12/05/2019
 
@@ -50,23 +48,23 @@ Estructura del protocol POP3 :
 L'estructura del protocol POP3 està compost per l'arquitectura de client/servidor
 i per diversos agents que intervenen en una comunicació POP3:
 
-Agents:
+* **Agents**
 
-**MUA (mail user agent).** Per accedir al correu, l'usuari interactua amb el mail 
+* MUA (mail user agent). Per accedir al correu, l'usuari interactua amb el mail 
 user agent mitjançant el POP3. Aquest users estàn programats en les pàgines 
 de correus com GMAIL,Outlook...
 
-**Client POP3.** El client POP3 és l'encarregat de crear la comunicació amb 
+* Client POP3. El client POP3 és l'encarregat de crear la comunicació amb 
 el servidor POP3 per tal d'obtenir els missatges de la bústia de correu
 de l'usuari. El llenguatge que utilitzen entre client/servidor és
 el protocol POP3.
 
 
-**Servidor POP3.** EL servidor POP3 és l'encarregat d'implementar l'accés 
+* Servidor POP3. EL servidor POP3 és l'encarregat d'implementar l'accés 
 remot al correu, també conté les bústies dels usuaris. Els missatges
 es reben mitjançant SMTP.
 
-* Estats de sessió del POP3
+* **Estats de sessió del POP3**
 
 El protocol POP3 està estructurat per tres estats:
 
@@ -88,39 +86,39 @@ El servidor entra en l'estat actualització una vegada ha rebut l'ordre
 "quit" del client. En aquest moment es finalitza la comunicació
 
 
-* Ordres del POP3
+* **Ordres del POP3**
 
 En cada estat s'originen una serie d'ordres per interactuar.
 
 En l'estat d'Autorització, es compon de les següents ordres:
 
-**USER nomUsuari**. Ordre per identificar el  nom d'usuari del client al servidor POP.
+* USER nomUsuari. Ordre per identificar el  nom d'usuari del client al servidor POP.
 
-**PASS password** Ordre per autenticar el client al servidor POP.
+* PASS password Ordre per autenticar el client al servidor POP.
 
 
 En l'estat de transacció, es compon de les següents ordres:
 
-**STAT**. Ordre que dona informació de la bustia de l'usuari.
+* STAT. Ordre que dona informació de la bustia de l'usuari.
 
-**LIST[msg]**. Ordre que llista els missatges o un en concret.
+* LIST[msg]. Ordre que llista els missatges o un en concret.
 
-**RETR msg**. Ordre que descarrega un missatge concret del servidor
+* RETR msg. Ordre que descarrega un missatge concret del servidor
 al client.
 
-**DELE msg**. Ordre que marca el missatge que es vol esborrar, marca
+* DELE msg. Ordre que marca el missatge que es vol esborrar, marca
 només el missatge que es vol esborrar però no l'esborra.
 
-**NOOP**. Ordre que força al server a donar una resposta.
+* NOOP. Ordre que força al server a donar una resposta.
 
-**RSET**. Ordre que desmarca tots els missatges que estaven marcats per esborrar,
+* RSET. Ordre que desmarca tots els missatges que estaven marcats per esborrar,
  es realitza abans de passar a l'estat d'actualització.
  
-**TOP msg nlin** Ordre que descarrega només les línies inicials del missatge,
+* TOP msg nlin. Ordre que descarrega només les línies inicials del missatge,
 
-**UIDL[msg]**. Ordre que identifica els missatges amb el número indicat.
+* UIDL[msg]. Ordre que identifica els missatges amb el número indicat.
 
-**QUIT**. Ordre que finalitza la sessió entre client i servidor.
+* QUIT . Ordre que finalitza la sessió entre client i servidor.
 
 En l'estat d'actualització no es compon d'ordres, nomès elimina els missatges
 que han sigut marcats.
@@ -139,26 +137,26 @@ es permet la manipulació remota de les carpetes i els missatges.
 Es poden crear, modificar i suprimir carpetes i missatges
 
 
-* Model IMAP
+* **Model IMAP**
 
 L'estructura del model IMAP és de client/servidor i intervenen varis agents:
 
-**MUA (mail user agent)**. Per accedir al correu, l'usuari interactua amb el mail 
+* MUA (mail user agent). Per accedir al correu, l'usuari interactua amb el mail 
 user agent mitjançant IMAP. Aquest users estàn programats en les pàgines 
 de correus com GMAIL,Outlook...
 
-**Client IMAP.** El client POP3 és l'encarregat de crear la comunicació amb 
+* Client IMAP. El client POP3 és l'encarregat de crear la comunicació amb 
 el servidor IMAP per tal d'obtenir els missatges de la bústia de correu
 de l'usuari. El llenguatge que utilitzen entre client/servidor és
 el protocol IMAP.
 
 
-**Servidor IMAP.** EL servidor IMAP és l'encarregat d'implementar l'accés 
+* Servidor IMAP. EL servidor IMAP és l'encarregat d'implementar l'accés 
 remot al correu, també conté les bústies dels usuaris. Els missatges
 es reben mitjançant SMTP.
 
 
-* Estats del protocol IMAP
+* **Estats del protocol IMAP**
 
 El protocol IMAP està estructurat per quatre estats:
 
@@ -220,7 +218,7 @@ en les pròpies bústies que en faciliten la gestió:
 	
 	
 	
-* Funcionament IMAP
+* **Funcionament IMAP**
 
 Generalmen el funcionament del protocol IMAP és la connexió del
 client al servidor a través del port 143 on s'inicia un diàleg el 
@@ -232,7 +230,7 @@ la primera ordre i a002 la segona.
 **Respostes**. Les respostes s'envien una vegada es processa l'ordre
 enviada.
 
-* Llistat d'ordres 
+* **Llistat d'ordres** 
 
 **Ordres generals en qualsevol estat:
 
